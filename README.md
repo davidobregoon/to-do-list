@@ -1,41 +1,44 @@
-# 📝 Python To-Do List
+# 📝 To-Do List CLI
 
-Una aplicación de consola desarrollada en **Python** para gestionar tareas de forma sencilla y eficiente.
+![Python](https://img.shields.io/badge/Python-3.13+-blue.svg)
+![Tests](https://img.shields.io/badge/tests-7%20passed-success.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-El proyecto implementa un sistema CRUD (Create, Read, Update, Delete) con persistencia de datos mediante archivos JSON, siguiendo buenas prácticas de programación y una arquitectura modular.
+Aplicación de línea de comandos desarrollada en **Python** para administrar tareas mediante un sistema CRUD completo con persistencia de datos en JSON.
+
+El proyecto fue construido aplicando buenas prácticas de desarrollo:
+
+- Arquitectura modular.
+- Separación de responsabilidades.
+- Programación orientada a objetos.
+- Pruebas automatizadas.
+- Formateo y análisis estático de código.
 
 ---
 
-## ✨ Características
+## 🚀 Características
 
-- ➕ Agregar tareas
-- 📋 Listar tareas
-- ✏️ Editar tareas
-- ✅ Marcar y desmarcar tareas como completadas
-- 🗑️ Eliminar tareas
-- 💾 Guardado automático en JSON
-- 🛡️ Validación de entradas
-- 🧩 Código modular y fácil de mantener
+- Crear tareas.
+- Listar tareas.
+- Editar tareas.
+- Completar y descompletar tareas.
+- Eliminar tareas.
+- Persistencia automática en JSON.
+- Validación de entradas.
+- Tests automatizados.
 
 ---
 
 ## 📂 Estructura del proyecto
 
 ```text
-to-do-list/
-│
-├── data/
-│   └── tareas.json
-│
-├── docs/
-│   ├── architecture.md
-│   └── screenshots/
-│
+to-list-cli/
+
 ├── src/
-│   ├── menu.py
 │   ├── models.py
 │   ├── storage.py
 │   ├── task_manager.py
+│   ├── menu.py
 │   └── utils.py
 │
 ├── tests/
@@ -43,20 +46,21 @@ to-do-list/
 │   ├── test_task_manager.py
 │   └── test_utils.py
 │
-├── .github/
-│   └── workflows/
-│       └── python.yml
+├── data/
+│   └── tareas.example.json
+│
+├── docs/
+│   └── architecture.md
 │
 ├── main.py
-├── README.md
-├── LICENSE
 ├── requirements.txt
-└── .gitignore
+├── pyproject.toml
+└── README.md
 ```
 
 ---
 
-## 🚀 Instalación
+## ⚙️ Instalación
 
 Clona el repositorio:
 
@@ -67,78 +71,117 @@ git clone https://github.com/davidobregoon/to-do-list.git
 Entra al proyecto:
 
 ```bash
-cd to-do-list
+cd to-list-cli
 ```
 
-Instala las dependencias:
+Instala dependencias:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Ejecuta la aplicación:
+---
+
+## ▶️ Ejecutar aplicación
 
 ```bash
 python main.py
 ```
 
----
-
-## 🛠️ Tecnologías
-
-- Python 3
-- JSON
-- Dataclasses
-- Pytest
-- Git
-- GitHub
-
----
-
-## 📸 Capturas
-
-Cuando el proyecto esté terminado puedes agregar imágenes aquí.
+Ejemplo:
 
 ```text
-docs/screenshots/menu.png
-docs/screenshots/agregar.png
-docs/screenshots/listar.png
-docs/screenshots/editar.png
+===== LISTA DE TAREAS =====
+
+1. Agregar tarea
+2. Ver tareas
+3. Completar/descompletar tarea
+4. Editar tarea
+5. Eliminar tarea
+6. Salir
 ```
 
 ---
 
-## 🧪 Pruebas
+## 🧪 Ejecutar pruebas
 
-Para ejecutar las pruebas:
+Ejecutar tests:
 
 ```bash
-pytest
+python -m pytest
+```
+
+Resultado esperado:
+
+```text
+7 passed
 ```
 
 ---
 
-## 📈 Próximas mejoras
+## 🛠️ Herramientas de desarrollo
 
-- [ ] Buscar tareas
-- [ ] Ordenar tareas
-- [ ] Filtrar tareas completadas
-- [ ] Exportar tareas a CSV
-- [ ] Interfaz gráfica con Tkinter
-- [ ] Base de datos SQLite
+### Formatear código
+
+```bash
+python -m black .
+```
+
+### Analizar código
+
+```bash
+python -m ruff check .
+```
+
+---
+
+## 🏗️ Arquitectura
+
+El proyecto utiliza una separación por capas:
+
+```
+Usuario
+  |
+  v
+menu.py
+  |
+  v
+task_manager.py
+  |
+  v
+storage.py
+  |
+  v
+JSON
+```
+
+Más información:
+
+```
+docs/architecture.md
+```
+
+---
+
+## 📌 Próximas mejoras
+
+- [ ] Buscar tareas.
+- [ ] Filtrar tareas completadas.
+- [ ] Base de datos SQLite.
+- [ ] API REST.
+- [ ] Interfaz gráfica.
 
 ---
 
 ## 📄 Licencia
 
-Este proyecto está bajo la licencia **MIT**.
-
-Consulta el archivo `LICENSE` para más información.
+Este proyecto está bajo licencia MIT.
 
 ---
 
 ## 👨‍💻 Autor
 
-**David Obregón**
+David Obregón
 
-GitHub: https://github.com/davidobregoon
+GitHub:
+https://github.com/davidobregoon
