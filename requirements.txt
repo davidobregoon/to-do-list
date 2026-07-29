@@ -1,0 +1,8 @@
+# Este proyecto utiliza únicamente la librería estándar de Python.
+# No requiere dependencias externas.
+
+# Dependencias de desarrollo (opcional)
+
+pytest>=8.0.0
+black>=24.0.0
+ruff>=0.5.0

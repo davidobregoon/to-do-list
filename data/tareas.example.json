@@ -1,0 +1,10 @@
+[
+    {
+        "texto": "Aprender Python",
+        "completada": true
+    },
+    {
+        "texto": "Crear un proyecto profesional",
+        "completada": false
+    }
+]
